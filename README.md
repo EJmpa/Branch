@@ -12,7 +12,7 @@ Welcome to the CS Messaging Web App project! This project aims to provide a simp
 ## Technologies Used
 
 - Python (Flask) for backend development
-- HTML, CSS, and JavaScript for frontend development
+- React for frontend development
 - SQLite for database storage
 
 ## Application Structure
