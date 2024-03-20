@@ -33,7 +33,8 @@ db = SQLAlchemy()
 migrate = Migrate()
 
 def create_app(config_file='config.py'):
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder="../frontend/public", static_url_path="")
+    print(app.template_folder)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///messaging_app.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config.from_pyfile(config_file)

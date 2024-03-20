@@ -1,15 +1,11 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from app.services.customer_service import update_customer_username
 
 main_bp = Blueprint('main', __name__)
 
 @main_bp.route('/')
 def home():
-    return "Hello, World!"
-
-@main_bp.route('/home')
-def return_json():
-    return jsonify({"message": "Hello, World!"})
+    return render_template('frontend/public/index.html')
 
 @main_bp.route('/customer/<int:customer_id>/update_username', methods=['POST'])
 def update_customer_username_route(customer_id):
